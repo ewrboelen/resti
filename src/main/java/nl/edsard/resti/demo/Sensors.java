@@ -12,7 +12,7 @@ public class Sensors {
   
         if (sensorList == null) {
   
-            sensorList  = new ArrayList<>();
+            sensorList  = new ArrayList<Sensor>();
         }
   
         return sensorList;

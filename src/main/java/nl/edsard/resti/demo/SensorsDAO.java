@@ -1,6 +1,8 @@
 package nl.edsard.resti.demo;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.server.ResponseStatusException;
 
 @Repository
 public class SensorsDAO {
@@ -32,7 +34,9 @@ public class SensorsDAO {
         if(sensorId < list.getSensorList().size()){
             return list.getSensorList().get(sensorId);
         }else{
-            return null;
+            throw new ResponseStatusException(
+                HttpStatus.NOT_FOUND, "entity not found"
+            );
         }
     }
 

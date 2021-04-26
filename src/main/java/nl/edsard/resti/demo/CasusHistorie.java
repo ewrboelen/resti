@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class CasusHistorie {
     
+    private Integer id;
     private Integer casusId;
     private String opmerking;
     private Date aanmaakDatum;
@@ -40,7 +41,12 @@ public class CasusHistorie {
     public void setProcesStap(String procesStap) {
         this.procesStap = procesStap;
     }
-
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
 
 }
